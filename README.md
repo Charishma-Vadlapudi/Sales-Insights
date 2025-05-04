@@ -23,3 +23,5 @@ SELECT SUM(sales_amount) FROM transactions join date ON transactions.order_date=
 SELECT custmer_name,SUM(sales_amount) as revenue FROM transactions join customers ON transactions.customer_code=customers.customer_code group by custmer_name order by revenue desc LIMIT 5;
 **Show Top 5 products selling**
 SELECT product_code,SUM(sales_qty) as saleqty FROM transactions GROUP BY product_code order by saleqty desc LIMIT 5;
+**Show Top 5 Customers in terms of profit contribution**
+SELECT markets_name, (SUM(profit_margin)/SUM(sales_amount)) as profit_margin_percentage FROM transactions join markets on transactions.market_code=markets.markets_code group by markets_name order by profit_margin_percentage desc LIMIT 5;
