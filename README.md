@@ -1,6 +1,7 @@
 # Sales-Insights
-**SQL STATEMENTS TO ANALYSE SALES OF A COMPANY AND PROVIDING INSIGHTS**
-**Tables & Columns in our data-** customers-{customer_code,custmer_name,customer_type},                                     date-{date,cy_date,year,month_name,date_yy_mm},markets-{markets_code,markets_name,zone},products-{product_code,product_type},transactions-{product_code,customer_code,market_code,order_date,sales_qty,sales_amount,currency,profit_margin_percentage,profit_margin,cost_price}
+##**SQL STATEMENTS TO ANALYSE SALES OF A COMPANY AND PROVIDING INSIGHTS**##
+##**Tables & Columns in our data-**##
+customers-{customer_code,custmer_name,customer_type},                                     date-{date,cy_date,year,month_name,date_yy_mm},markets-{markets_code,markets_name,zone},products-{product_code,product_type},transactions-{product_code,customer_code,market_code,order_date,sales_qty,sales_amount,currency,profit_margin_percentage,profit_margin,cost_price}
 ## DATA ANALYSIS USING SQL ##
 **Show all customer records**: SELECT * FROM customers;
 **Show total number of customers**: SELECT COUNT(*) FROM customers;
