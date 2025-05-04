@@ -17,5 +17,9 @@ SELECT * FROM transactions join date ON transactions.order_date=date.date;
 SELECT SUM(sales_amount) FROM transactions join date ON transactions.order_date=date.date WHERE year=2020
 **Show total revenue in 2020 in the month of January**
 SELECT SUM(sales_amount) FROM transactions join date ON transactions.order_date=date.date WHERE year=2020 and month_name='January';
-**Show total revenue in 2020 in the month of January for Chennai region**
+**Show total revenue in 2020 in the month of January for Chennai region**:
 SELECT SUM(sales_amount) FROM transactions join date ON transactions.order_date=date.date JOIN markets ON markets.markets_code=transactions.market_code WHERE year=2020 and month_name='January' and markets_name='Chennai';
+**Show Top 5 Customers with highest contribtuion to Revenue**:
+SELECT custmer_name,SUM(sales_amount) as revenue FROM transactions join customers ON transactions.customer_code=customers.customer_code group by custmer_name order by revenue desc LIMIT 5;
+**Show Top 5 products selling**
+SELECT product_code,SUM(sales_qty) as saleqty FROM transactions GROUP BY product_code order by saleqty desc LIMIT 5;
